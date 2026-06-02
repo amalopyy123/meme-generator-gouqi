@@ -164,7 +164,7 @@ add_meme(
     lucifina_squeeze,
     max_images=1,
     min_images=1,
-    keywords=["路西菲娜捏"],
+    keywords=["露西菲娜捏"],
     date_created=datetime.datetime(2026, 6, 1),
     date_modified=datetime.datetime(2026, 6, 1),
 )
