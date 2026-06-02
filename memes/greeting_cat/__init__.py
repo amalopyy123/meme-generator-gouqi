@@ -11,7 +11,7 @@ IMG_DIR = Path(__file__).parent / "images"
 GREETING_CAT_GIF_PATH = IMG_DIR / "greeting_cat.gif"
 
 CANVAS_SIZE = (300, 300)
-MAX_USER_IMAGE_SIZE = (180, 180)
+MAX_USER_IMAGE_SIZE = (230, 230)
 
 with Image.open(GREETING_CAT_GIF_PATH) as _greeting_cat_gif:
     FRAME_COUNT = getattr(_greeting_cat_gif, "n_frames", 1)
