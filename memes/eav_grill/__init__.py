@@ -13,12 +13,12 @@ BACKGROUND_PATH = IMG_DIR / "background.png"
 
 FRAME_COUNT = 24
 FRAME_DURATION = 0.05
-FOOD_MAX_SIZE = (80, 80)
+FOOD_MAX_SIZE = (100, 100)
 ANCHOR_DEBUG_RADIUS = 8
 
 # These values define the swing geometry and can be tuned later when the rope
 # rendering is added.
-ROPE_ANCHOR = (55, -40)
+ROPE_ANCHOR = (55, -60)
 ROPE_LENGTH = 60
 REST_ANGLE_DEG = 8
 SWING_AMPLITUDE_DEG = 45
@@ -90,7 +90,7 @@ def eav_grill(images: list[BuildImage], texts, args):
             angle = calculate_swing_angle(i)
             rope_end = calculate_rope_end(ROPE_ANCHOR, ROPE_LENGTH, angle)
             food_position = calculate_food_position(rope_end, food.size)
-            # draw ROPE_ANCHOR for debug
+            # draw ROPE_ANCHOR for debugging, sometimes has no effect if ROPE_ANCHOR.x <0 or ROPE_ANCHOR.y <0
             # draw.ellipse(
             #     (
             #         ROPE_ANCHOR[0] - ANCHOR_DEBUG_RADIUS,
